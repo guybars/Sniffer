@@ -6,8 +6,7 @@ import datetime
 import mysql.connector
 
 #connecting to the SQL database
-conn = mysql.connector.Connect(host="sniffer2.mysql.database.azure.com" , port=3306,database="sniffer2", user="root2@sniffer2",password="mySQL123")
-#conn = mysql.connector.Connect(user="root2@sniffer2",password="mySQL123", host="sniffer2.mysql.database.azure.com" ,port=3306,database="sniffer2")
+conn = mysql.connector.Connect(host="#####.mysql.database.azure.com" , port=####,database="DB_NAME", user="root@DB",password="PASSWORD")
 c = conn.cursor()
 print("Connected to MYSQL DB")
 #creates the needed table if not exits
