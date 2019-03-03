@@ -29,42 +29,43 @@ while ($row = mysqli_fetch_array($result)){
 		#checks if 'jpg' exits in path
 		if (strpos($k,'jpg') !== false)
 		{
+			
 			print "[IMAGE]" ; 
-		    #prints data and time
-		    print $d;
-		    print " ";
-		    #prints the link and makes it clickable
-		    print preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Z?-??-?()0-9@:%_+.~#?&;//=]+)!i', '<a 
-		    href="$1">$1</a>', $k);
-		    echo "\xA".'<br />'.'<br />';
-		}
-		else{
-			#checks if 'png' exits in path
-		    if (strpos($k, 'png') !== false)
-		    {
-			    print "[IMAGE]" ; 
 		        #prints data and time
 		        print $d;
-	    	    print " ";
+		        print " ";
 		        #prints the link and makes it clickable
-	    	    print preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Z?-??-?()0-9@:%_+.~#?&;//=]+)!i', '<a 
-     	     	href="$1">$1</a>', $k);
-	        	echo "\xA".'<br />'.'<br />';
-	    	}
+		        print preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Z?-??-?()0-9@:%_+.~#?&;//=]+)!i', '<a 
+		        href="$1">$1</a>', $k);
+		        echo "\xA".'<br />'.'<br />';
+		}
+		else{
+			
+			#checks if 'png' exits in path
+		        if (strpos($k, 'png') !== false){
+				
+			        print "[IMAGE]" ; 
+				#prints data and time
+				print $d;
+				print " ";
+				#prints the link and makes it clickable
+	    	                print preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Z?-??-?()0-9@:%_+.~#?&;//=]+)!i', '<a 
+     	                 	href="$1">$1</a>', $k);
+	        	        echo "\xA".'<br />'.'<br />';
+	        	}
 			else
 			{
 				#checks if 'gif' exits in path
 				if (strpos($k, 'gif') !== false)
 				{
 					print "[GIF]" ; 
-	    	        #prints data and time
-	    	        print $d;
-	        	    print " ";
-		            #prints the link and makes it clickable
-	        	    print preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Z?-??-?()0-9@:%_+.~#?&;//=]+)!i', '<a 
-     	         	href="$1">$1</a>', $k);
-	             	echo "\xA".'<br />'.'<br />';
-					
+	    	                        #prints data and time
+	    	                        print $d;
+	          	  	        print " ";
+		    		        #prints the link and makes it clickable
+	        	      	        print preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Z?-??-?()0-9@:%_+.~#?&;//=]+)!i', '<a 
+     	         			href="$1">$1</a>', $k);
+	             			echo "\xA".'<br />'.'<br />';	
 				}
 				else
 				{
@@ -72,14 +73,13 @@ while ($row = mysqli_fetch_array($result)){
 					if (strpos($k, '.js') !== false)
 					{
 						print "[JS]" ; 
-	    	            #prints data and time
-	        	        print $d;
-    	        	    print " ";
-    		            #prints the link and makes it clickable
-    	        	    print preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Z?-??-?()0-9@:%_+.~#?&;//=]+)!i', '<a 
-         	         	href="$1">$1</a>', $k);
-    	             	echo "\xA".'<br />'.'<br />';
-						
+	    	            			#prints data and time
+	        	        		print $d;
+    	        	    			print " ";
+    		            			#prints the link and makes it clickable
+    	        	    			print preg_replace('!(((f|ht)tp(s)?://)[-a-zA-Z?-??-?()0-9@:%_+.~#?&;//=]+)!i', '<a 
+         	         			href="$1">$1</a>', $k);
+    	             				echo "\xA".'<br />'.'<br />';
 					}
 					else
 					{
